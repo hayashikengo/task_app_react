@@ -14,8 +14,8 @@ var TaskForm = React.createClass ({
 			<form className="todoForm" onSubmit={this.handleSubmit}>
 			  <div className="input-group">
 				  <input type="text" className="form-control" placeholder="ToDo" ref="content" />
-					<span className="imput-group-btn">
-					  <input type="submit" className="btn btn-primary" value="登録"/>
+					<span className="imput-group-btn"  id="submit_bottun">
+					  <input type="submit" className="btn btn-primary" value="登録" />
 					</span>
 				</div>
 			</form>

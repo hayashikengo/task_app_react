@@ -15,14 +15,13 @@ var TaskApp = React.createClass({
     });
   },
   handleTaskSubmit: function(task) {
-    var tasks = this.state.data;
-    // var newTasks = tasks.concat([task]);
     $.ajax({
       url: this.props.url,
       dataType: 'json',
       method: 'POST',
       data: task,
       success: function(result) {
+        var tasks = this.state.data;
         var newTasks = tasks.concat(result);
         this.setState({data: newTasks});
       }.bind(this),
